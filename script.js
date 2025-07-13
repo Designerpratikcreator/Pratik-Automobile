@@ -11,7 +11,7 @@
                 transmission: 'Automatic',
                 features: ['Sunroof', 'Leather Seats', 'Apple CarPlay', 'Lane Keep Assist'],
                 price: 25000,
-                image: 'https://placehold.co/600x400/3b82f6/ffffff?text=Honda+Civic+2022'
+                image: '/Assets/Honda Civic.jpg'
             },
             {
                 id: 'honda-crv-2021',
@@ -23,7 +23,7 @@
                 transmission: 'Automatic',
                 features: ['AWD', 'Panoramic Roof', 'Adaptive Cruise Control'],
                 price: 30000,
-                image: 'https://placehold.co/600x400/3b82f6/ffffff?text=Honda+CR-V+2021'
+                image: '/Assets/Honda crv.jpg'
             },
             {
                 id: 'mitsubishi-pajero-2020',
@@ -35,7 +35,7 @@
                 transmission: 'Automatic',
                 features: ['4x4', 'Off-road Package', '7-Seater'],
                 price: 40000,
-                image: 'https://placehold.co/600x400/60a5fa/ffffff?text=Mitsubishi+Pajero+2020'
+                image: '/Assets/Mitsubishi pajero.jpg'
             },
             {
                 id: 'toyota-camry-2023',
@@ -47,7 +47,7 @@
                 transmission: 'CVT',
                 features: ['Hybrid System', 'Blind Spot Monitor', 'JBL Audio'],
                 price: 32000,
-                image: 'https://placehold.co/600x400/3b82f6/ffffff?text=Toyota+Camry+2023'
+                image: '/Assets/Toyota camry.jpg'
             },
             {
                 id: 'toyota-fortuner-2022',
@@ -59,7 +59,7 @@
                 transmission: 'Automatic',
                 features: ['7-Seater', 'Leather Interior', 'LED Headlights'],
                 price: 45000,
-                image: 'https://placehold.co/600x400/60a5fa/ffffff?text=Toyota+Fortuner+2022'
+                image: '/Assets/Toyota fortuner.jpg'
             },
             {
                 id: 'hyundai-tucson-2021',
@@ -71,7 +71,7 @@
                 transmission: 'Automatic',
                 features: ['Panoramic Sunroof', 'Ventilated Seats', 'Wireless Charging'],
                 price: 28000,
-                image: 'https://placehold.co/600x400/3b82f6/ffffff?text=Hyundai+Tucson+2021'
+                image: '/Assets/Hyundai Tucson.jpg'
             },
             {
                 id: 'porsche-911-2020',
@@ -83,7 +83,7 @@
                 transmission: 'PDK',
                 features: ['Sport Chrono Package', 'Bose Surround Sound', 'Carbon Ceramic Brakes'],
                 price: 120000,
-                image: 'https://placehold.co/600x400/60a5fa/ffffff?text=Porsche+911+2020'
+                image: '/Assets/Porsche 911.jpeg'
             },
             {
                 id: 'landrover-discovery-2022',
@@ -95,7 +95,7 @@
                 transmission: 'Automatic',
                 features: ['Air Suspension', 'Meridian Sound System', 'Terrain Response 2'],
                 price: 75000,
-                image: 'https://placehold.co/600x400/3b82f6/ffffff?text=Land+Rover+Discovery+2022'
+                image: '/Assets/Land rover.jpg'
             },
             {
                 id: 'defenders-90-2021',
@@ -107,7 +107,7 @@
                 transmission: 'Automatic',
                 features: ['Off-Road Tires', 'Winch', 'Expedition Roof Rack'],
                 price: 80000,
-                image: 'https://placehold.co/600x400/60a5fa/ffffff?text=Defender+90+2021'
+                image: '/Assets/Defender.jpg'
             },
             {
                 id: 'jeep-wrangler-2020',
@@ -119,7 +119,7 @@
                 transmission: 'Automatic',
                 features: ['Removable Roof', 'Off-Road Suspension', 'Locking Differentials'],
                 price: 55000,
-                image: 'https://placehold.co/600x400/3b82f6/ffffff?text=Jeep+Wrangler+2020'
+                image: '/Assets/Jeep.jpg'
             },
             {
                 id: 'ford-f150-2023',
@@ -131,7 +131,7 @@
                 transmission: '10-Speed Automatic',
                 features: ['Fox Racing Shocks', 'Trail Control', 'Pro Power Onboard'],
                 price: 65000,
-                image: 'https://placehold.co/600x400/60a5fa/ffffff?text=Ford+F-150+2023'
+                image: '/Assets/Ford.jpg'
             },
             {
                 id: 'toyota-prius-2021',
@@ -143,7 +143,7 @@
                 transmission: 'CVT',
                 features: ['Excellent Fuel Economy', 'Toyota Safety Sense', 'Heated Seats'],
                 price: 26000,
-                image: 'https://placehold.co/600x400/3b82f6/ffffff?text=Toyota+Prius+2021'
+                image: '/Assets/Toyota Prius.jpeg'
             },
             {
                 id: 'honda-accord-2020',
@@ -155,7 +155,7 @@
                 transmission: 'Automatic',
                 features: ['Honda Sensing', 'Wireless Phone Charger', 'Heads-Up Display'],
                 price: 24000,
-                image: 'https://placehold.co/600x400/60a5fa/ffffff?text=Honda+Accord+2020'
+                image: '/Assets/Honda Accord 2020.jpg'
             },
             {
                 id: 'mitsubishi-outlander-2022',
@@ -167,7 +167,7 @@
                 transmission: 'CVT',
                 features: ['Super All-Wheel Control', '3rd Row Seating', 'Bose Premium Audio'],
                 price: 31000,
-                image: 'https://placehold.co/600x400/3b82f6/ffffff?text=Mitsubishi+Outlander+2022'
+                image: '/Assets/Mitsubishi pajero.jpg'
             },
             {
                 id: 'hyundai-elantra-2023',
@@ -179,7 +179,7 @@
                 transmission: 'IVT',
                 features: ['Digital Key', 'Smart Trunk', 'LED Daytime Running Lights'],
                 price: 23000,
-                image: 'https://placehold.co/600x400/60a5fa/ffffff?text=Hyundai+Elantra+2023'
+                image: '/Assets/Hyundai Elantra.jpeg'
             },
         ]; 
 
