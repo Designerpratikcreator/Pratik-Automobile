@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratik Automobile - Reconditioned Car Center</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+  <body class="transition-colors duration-300">
+    <div id="app" class="min-h-screen flex flex-col">
+        <!-- Navigation Bar -->
+        <header class="bg-card shadow-md py-4 px-6 sticky top-0 z-50 border-b border-color">
+            <nav class="container mx-auto flex justify-between items-center flex-wrap">
+                <div class="flex items-center space-x-2">
+                    <svg class="h-8 w-8 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19.5 7.5L12 12L4.5 7.5M4.5 16.5L12 21L19.5 16.5M19.5 7.5V16.5M4.5 7.5V16.5M12 12L12 21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <a href="#home" class="text-2xl font-bold text-primary">Pratik Automobile</a>
+                </div>
+                <div class="block lg:hidden">
+                    <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-text-light border-text-light hover:text-primary hover:border-primary">
+                        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+                    </button>
+                </div>
+                <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden" id="nav-content">
+                    <ul class="text-lg lg:flex-grow lg:flex justify-end items-center">
+                        <li><a href="#home" class="block mt-4 lg:inline-block lg:mt-0 text-text-light hover:text-primary px-4 py-2 rounded-md transition-colors duration-200">Home</a></li>
+                        <li><a href="#about" class="block mt-4 lg:inline-block lg:mt-0 text-text-light hover:text-primary px-4 py-2 rounded-md transition-colors duration-200">About</a></li>
+                        <li class="relative group">
+                            <a href="#" class="block mt-4 lg:inline-block lg:mt-0 text-text-light hover:text-primary px-4 py-2 rounded-md transition-colors duration-200">Brands <i class="fas fa-chevron-down text-xs ml-1"></i></a>
+                            <ul class="absolute hidden group-hover:block bg-card shadow-lg rounded-md mt-2 w-48 py-2 border border-color z-20">
+                                <li><a href="#brand-honda" class="block px-4 py-2 text-text-light hover:bg-input-bg rounded-md">Honda</a></li>
+                                <li><a href="#brand-mitsubishi" class="block px-4 py-2 text-text-light hover:bg-input-bg rounded-md">Mitsubishi</a></li>
+                                <li><a href="#brand-toyota" class="block px-4 py-2 text-text-light hover:bg-input-bg rounded-md">Toyota</a></li>
+                                <li><a href="#brand-hyundai" class="block px-4 py-2 text-text-light hover:bg-input-bg rounded-md">Hyundai</a></li>
+                                <li><a href="#brand-porsche" class="block px-4 py-2 text-text-light hover:bg-input-bg rounded-md">Porsche</a></li>
+                                <li><a href="#brand-landrover" class="block px-4 py-2 text-text-light hover:bg-input-bg rounded-md">Land Rover</a></li>
+                                <li><a href="#brand-defenders" class="block px-4 py-2 text-text-light hover:bg-input-bg rounded-md">Defenders</a></li>
+                                <li><a href="#brand-jeep" class="block px-4 py-2 text-text-light hover:bg-input-bg rounded-md">Jeep</a></li>
+                                <li><a href="#brand-ford" class="block px-4 py-2 text-text-light hover:bg-input-bg rounded-md">Ford</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#features" class="block mt-4 lg:inline-block lg:mt-0 text-text-light hover:text-primary px-4 py-2 rounded-md transition-colors duration-200">Features</a></li>
+                        <li class="relative group">
+                            <a href="#" class="block mt-4 lg:inline-block lg:mt-0 text-text-light hover:text-primary px-4 py-2 rounded-md transition-colors duration-200">Gallery <i class="fas fa-chevron-down text-xs ml-1"></i></a>
+                            <ul class="absolute hidden group-hover:block bg-card shadow-lg rounded-md mt-2 w-48 py-2 border border-color z-20">
+                                <li><a href="#gallery-2023" class="block px-4 py-2 text-text-light hover:bg-input-bg rounded-md">2023 Models</a></li>
+                                <li><a href="#gallery-2022" class="block px-4 py-2 text-text-light hover:bg-input-bg rounded-md">2022 Models</a></li>
+                                <li><a href="#gallery-2021" class="block px-4 py-2 text-text-light hover:bg-input-bg rounded-md">2021 Models</a></li>
+                                <li><a href="#gallery-older" class="block px-4 py-2 text-text-light hover:bg-input-bg rounded-md">Older Models</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#booking" class="block mt-4 lg:inline-block lg:mt-0 text-text-light hover:text-primary px-4 py-2 rounded-md transition-colors duration-200">Booking</a></li>
+                        <li><a href="#contact" class="block mt-4 lg:inline-block lg:mt-0 text-text-light hover:text-primary px-4 py-2 rounded-md transition-colors duration-200">Contact</a></li>
+                        <li>
+                            <button id="theme-toggle" class="block mt-4 lg:inline-block lg:mt-0 text-text-light hover:text-primary px-4 py-2 rounded-md transition-colors duration-200">
+                                <i class="fas fa-moon" id="theme-icon"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Main Content Area -->
+        <main id="content-area" class="flex-grow">
+            <!-- Content will be dynamically loaded here -->
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-card py-8 px-6 mt-12 border-t border-color">
+            <div class="container mx-auto text-center text-text-light">
+                <div class="flex justify-center space-x-6 mb-6">
+                    <a href="https://facebook.com/pratikautomobile" target="_blank" class="text-text-light hover:text-primary transition-colors duration-200">
+                        <i class="fab fa-facebook-f text-2xl"></i>
+                    </a>
+                    <a href="https://instagram.com/pratikautomobile" target="_blank" class="text-text-light hover:text-primary transition-colors duration-200">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+                    <a href="https://twitter.com/pratikautomobile" target="_blank" class="text-text-light hover:text-primary transition-colors duration-200">
+                        <i class="fab fa-twitter text-2xl"></i>
+                    </a>
+                    <a href="https://linkedin.com/company/pratikautomobile" target="_blank" class="text-text-light hover:text-primary transition-colors duration-200">
+                        <i class="fab fa-linkedin-in text-2xl"></i>
+                    </a>
+                </div>
+                <div class="mb-4">
+                    <a href="#" class="text-text-light hover:text-primary mx-3">Privacy Policy</a>
+                    <span class="text-text-light">|</span>
+                    <a href="#" class="text-text-light hover:text-primary mx-3">Terms of Service</a>
+                    <span class="text-text-light">|</span>
+                    <a href="#" class="text-text-light hover:text-primary mx-3">Sitemap</a>
+                    <span class="text-text-light">|</span>
+                    <a href="#" class="text-text-light hover:text-primary mx-3">FAQ</a>
+                </div>
+                <p>&copy; 2025 Pratik Automobile. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <!-- Modal for messages -->
+        <div id="messageModal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-button" onclick="document.getElementById('messageModal').classList.add('hidden')">&times;</span>
+                <h3 id="modalTitle" class="text-xl font-semibold mb-4 text-primary"></h3>
+                <p id="modalMessage" class="text-text-light"></p>
+                <button onclick="document.getElementById('messageModal').classList.add('hidden')" class="mt-6 px-6 py-2 bg-primary text-white rounded-md hover:bg-secondary-dark transition-colors duration-200">Close</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // --- Data Structure for Cars ---
+        const carsData = [
+            {
+                id: 'honda-civic-2022',
+                brand: 'Honda',
+                model: 'Civic',
+                year: 2022,
+                mileage: '15,000 km',
+                engine: '1.5L Turbo',
+                transmission: 'Automatic',
+                features: ['Sunroof', 'Leather Seats', 'Apple CarPlay', 'Lane Keep Assist'],
+                price: 25000,
+                image: 'https://placehold.co/600x400/3b82f6/ffffff?text=Honda+Civic+2022'
+            },
+            {
+                id: 'honda-crv-2021',
+                brand: 'Honda',
+                model: 'CR-V',
+                year: 2021,
+                mileage: '22,000 km',
+                engine: '2.0L i-VTEC',
+                transmission: 'Automatic',
+                features: ['AWD', 'Panoramic Roof', 'Adaptive Cruise Control'],
+                price: 30000,
+                image: 'https://placehold.co/600x400/3b82f6/ffffff?text=Honda+CR-V+2021'
+            },
+            {
+                id: 'mitsubishi-pajero-2020',
+                brand: 'Mitsubishi',
+                model: 'Pajero',
+                year: 2020,
+                mileage: '35,000 km',
+                engine: '3.2L Diesel',
+                transmission: 'Automatic',
+                features: ['4x4', 'Off-road Package', '7-Seater'],
+                price: 40000,
+                image: 'https://placehold.co/600x400/60a5fa/ffffff?text=Mitsubishi+Pajero+2020'
+            },
+            {
+                id: 'toyota-camry-2023',
+                brand: 'Toyota',
+                model: 'Camry',
+                year: 2023,
+                mileage: '8,000 km',
+                engine: '2.5L Hybrid',
+                transmission: 'CVT',
+                features: ['Hybrid System', 'Blind Spot Monitor', 'JBL Audio'],
+                price: 32000,
+                image: 'https://placehold.co/600x400/3b82f6/ffffff?text=Toyota+Camry+2023'
+            },
+            {
+                id: 'toyota-fortuner-2022',
+                brand: 'Toyota',
+                model: 'Fortuner',
+                year: 2022,
+                mileage: '18,000 km',
+                engine: '2.8L Diesel',
+                transmission: 'Automatic',
+                features: ['7-Seater', 'Leather Interior', 'LED Headlights'],
+                price: 45000,
+                image: 'https://placehold.co/600x400/60a5fa/ffffff?text=Toyota+Fortuner+2022'
+            },
+            {
+                id: 'hyundai-tucson-2021',
+                brand: 'Hyundai',
+                model: 'Tucson',
+                year: 2021,
+                mileage: '25,000 km',
+                engine: '2.0L Petrol',
+                transmission: 'Automatic',
+                features: ['Panoramic Sunroof', 'Ventilated Seats', 'Wireless Charging'],
+                price: 28000,
+                image: 'https://placehold.co/600x400/3b82f6/ffffff?text=Hyundai+Tucson+2021'
+            },
+            {
+                id: 'porsche-911-2020',
+                brand: 'Porsche',
+                model: '911 Carrera',
+                year: 2020,
+                mileage: '10,000 km',
+                engine: '3.0L Twin-Turbo',
+                transmission: 'PDK',
+                features: ['Sport Chrono Package', 'Bose Surround Sound', 'Carbon Ceramic Brakes'],
+                price: 120000,
+                image: 'https://placehold.co/600x400/60a5fa/ffffff?text=Porsche+911+2020'
+            },
+            {
+                id: 'landrover-discovery-2022',
+                brand: 'Land Rover',
+                model: 'Discovery',
+                year: 2022,
+                mileage: '12,000 km',
+                engine: '3.0L Ingenium',
+                transmission: 'Automatic',
+                features: ['Air Suspension', 'Meridian Sound System', 'Terrain Response 2'],
+                price: 75000,
+                image: 'https://placehold.co/600x400/3b82f6/ffffff?text=Land+Rover+Discovery+2022'
+            },
+            {
+                id: 'defenders-90-2021',
+                brand: 'Defenders', // Assuming 'Defenders' is treated as a brand here
+                model: 'Defender 90',
+                year: 2021,
+                mileage: '18,000 km',
+                engine: '3.0L P400',
+                transmission: 'Automatic',
+                features: ['Off-Road Tires', 'Winch', 'Expedition Roof Rack'],
+                price: 80000,
+                image: 'https://placehold.co/600x400/60a5fa/ffffff?text=Defender+90+2021'
+            },
+            {
+                id: 'jeep-wrangler-2020',
+                brand: 'Jeep',
+                model: 'Wrangler Rubicon',
+                year: 2020,
+                mileage: '28,000 km',
+                engine: '3.6L Pentastar',
+                transmission: 'Automatic',
+                features: ['Removable Roof', 'Off-Road Suspension', 'Locking Differentials'],
+                price: 55000,
+                image: 'https://placehold.co/600x400/3b82f6/ffffff?text=Jeep+Wrangler+2020'
+            },
+            {
+                id: 'ford-f150-2023',
+                brand: 'Ford',
+                model: 'F-150 Raptor',
+                year: 2023,
+                mileage: '5,000 km',
+                engine: '3.5L EcoBoost',
+                transmission: '10-Speed Automatic',
+                features: ['Fox Racing Shocks', 'Trail Control', 'Pro Power Onboard'],
+                price: 65000,
+                image: 'https://placehold.co/600x400/60a5fa/ffffff?text=Ford+F-150+2023'
+            },
+            {
+                id: 'toyota-prius-2021',
+                brand: 'Toyota',
+                model: 'Prius',
+                year: 2021,
+                mileage: '20,000 km',
+                engine: '1.8L Hybrid',
+                transmission: 'CVT',
+                features: ['Excellent Fuel Economy', 'Toyota Safety Sense', 'Heated Seats'],
+                price: 26000,
+                image: 'https://placehold.co/600x400/3b82f6/ffffff?text=Toyota+Prius+2021'
+            },
+            {
+                id: 'honda-accord-2020',
+                brand: 'Honda',
+                model: 'Accord',
+                year: 2020,
+                mileage: '30,000 km',
+                engine: '2.0L Turbo',
+                transmission: 'Automatic',
+                features: ['Honda Sensing', 'Wireless Phone Charger', 'Heads-Up Display'],
+                price: 24000,
+                image: 'https://placehold.co/600x400/60a5fa/ffffff?text=Honda+Accord+2020'
+            },
+            {
+                id: 'mitsubishi-outlander-2022',
+                brand: 'Mitsubishi',
+                model: 'Outlander',
+                year: 2022,
+                mileage: '10,000 km',
+                engine: '2.5L MIVEC',
+                transmission: 'CVT',
+                features: ['Super All-Wheel Control', '3rd Row Seating', 'Bose Premium Audio'],
+                price: 31000,
+                image: 'https://placehold.co/600x400/3b82f6/ffffff?text=Mitsubishi+Outlander+2022'
+            },
+            {
+                id: 'hyundai-elantra-2023',
+                brand: 'Hyundai',
+                model: 'Elantra',
+                year: 2023,
+                mileage: '7,000 km',
+                engine: '2.0L MPI',
+                transmission: 'IVT',
+                features: ['Digital Key', 'Smart Trunk', 'LED Daytime Running Lights'],
+                price: 23000,
+                image: 'https://placehold.co/600x400/60a5fa/ffffff?text=Hyundai+Elantra+2023'
+            },
+        ]; 
+      </body>
+</html>
