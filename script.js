@@ -182,6 +182,18 @@
                 image: '/Assets/Hyundai Elantra.jpeg'
             },
         ]; 
+   <!-- Modal for messages -->
+        <div id="messageModal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-button" onclick="document.getElementById('messageModal').classList.add('hidden')">&times;</span>
+                <h3 id="modalTitle" class="text-xl font-semibold mb-4 text-primary"></h3>
+                <p id="modalMessage" class="text-text-light"></p>
+                <button onclick="document.getElementById('messageModal').classList.add('hidden')" class="mt-6 px-6 py-2 bg-primary text-white rounded-md hover:bg-secondary-dark transition-colors duration-200">Close</button>
+            </div>
+        </div>
+
+    </div>
+
 
 // --- Global Variables and DOM Elements ---
         const contentArea = document.getElementById('content-area');
