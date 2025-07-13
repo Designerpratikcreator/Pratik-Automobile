@@ -1,4 +1,189 @@
-  // --- Global Variables and DOM Elements ---
+ <script>
+        // --- Data Structure for Cars ---
+        const carsData = [
+            {
+                id: 'honda-civic-2022',
+                brand: 'Honda',
+                model: 'Civic',
+                year: 2022,
+                mileage: '15,000 km',
+                engine: '1.5L Turbo',
+                transmission: 'Automatic',
+                features: ['Sunroof', 'Leather Seats', 'Apple CarPlay', 'Lane Keep Assist'],
+                price: 25000,
+                image: 'https://placehold.co/600x400/3b82f6/ffffff?text=Honda+Civic+2022'
+            },
+            {
+                id: 'honda-crv-2021',
+                brand: 'Honda',
+                model: 'CR-V',
+                year: 2021,
+                mileage: '22,000 km',
+                engine: '2.0L i-VTEC',
+                transmission: 'Automatic',
+                features: ['AWD', 'Panoramic Roof', 'Adaptive Cruise Control'],
+                price: 30000,
+                image: 'https://placehold.co/600x400/3b82f6/ffffff?text=Honda+CR-V+2021'
+            },
+            {
+                id: 'mitsubishi-pajero-2020',
+                brand: 'Mitsubishi',
+                model: 'Pajero',
+                year: 2020,
+                mileage: '35,000 km',
+                engine: '3.2L Diesel',
+                transmission: 'Automatic',
+                features: ['4x4', 'Off-road Package', '7-Seater'],
+                price: 40000,
+                image: 'https://placehold.co/600x400/60a5fa/ffffff?text=Mitsubishi+Pajero+2020'
+            },
+            {
+                id: 'toyota-camry-2023',
+                brand: 'Toyota',
+                model: 'Camry',
+                year: 2023,
+                mileage: '8,000 km',
+                engine: '2.5L Hybrid',
+                transmission: 'CVT',
+                features: ['Hybrid System', 'Blind Spot Monitor', 'JBL Audio'],
+                price: 32000,
+                image: 'https://placehold.co/600x400/3b82f6/ffffff?text=Toyota+Camry+2023'
+            },
+            {
+                id: 'toyota-fortuner-2022',
+                brand: 'Toyota',
+                model: 'Fortuner',
+                year: 2022,
+                mileage: '18,000 km',
+                engine: '2.8L Diesel',
+                transmission: 'Automatic',
+                features: ['7-Seater', 'Leather Interior', 'LED Headlights'],
+                price: 45000,
+                image: 'https://placehold.co/600x400/60a5fa/ffffff?text=Toyota+Fortuner+2022'
+            },
+            {
+                id: 'hyundai-tucson-2021',
+                brand: 'Hyundai',
+                model: 'Tucson',
+                year: 2021,
+                mileage: '25,000 km',
+                engine: '2.0L Petrol',
+                transmission: 'Automatic',
+                features: ['Panoramic Sunroof', 'Ventilated Seats', 'Wireless Charging'],
+                price: 28000,
+                image: 'https://placehold.co/600x400/3b82f6/ffffff?text=Hyundai+Tucson+2021'
+            },
+            {
+                id: 'porsche-911-2020',
+                brand: 'Porsche',
+                model: '911 Carrera',
+                year: 2020,
+                mileage: '10,000 km',
+                engine: '3.0L Twin-Turbo',
+                transmission: 'PDK',
+                features: ['Sport Chrono Package', 'Bose Surround Sound', 'Carbon Ceramic Brakes'],
+                price: 120000,
+                image: 'https://placehold.co/600x400/60a5fa/ffffff?text=Porsche+911+2020'
+            },
+            {
+                id: 'landrover-discovery-2022',
+                brand: 'Land Rover',
+                model: 'Discovery',
+                year: 2022,
+                mileage: '12,000 km',
+                engine: '3.0L Ingenium',
+                transmission: 'Automatic',
+                features: ['Air Suspension', 'Meridian Sound System', 'Terrain Response 2'],
+                price: 75000,
+                image: 'https://placehold.co/600x400/3b82f6/ffffff?text=Land+Rover+Discovery+2022'
+            },
+            {
+                id: 'defenders-90-2021',
+                brand: 'Defenders', // Assuming 'Defenders' is treated as a brand here
+                model: 'Defender 90',
+                year: 2021,
+                mileage: '18,000 km',
+                engine: '3.0L P400',
+                transmission: 'Automatic',
+                features: ['Off-Road Tires', 'Winch', 'Expedition Roof Rack'],
+                price: 80000,
+                image: 'https://placehold.co/600x400/60a5fa/ffffff?text=Defender+90+2021'
+            },
+            {
+                id: 'jeep-wrangler-2020',
+                brand: 'Jeep',
+                model: 'Wrangler Rubicon',
+                year: 2020,
+                mileage: '28,000 km',
+                engine: '3.6L Pentastar',
+                transmission: 'Automatic',
+                features: ['Removable Roof', 'Off-Road Suspension', 'Locking Differentials'],
+                price: 55000,
+                image: 'https://placehold.co/600x400/3b82f6/ffffff?text=Jeep+Wrangler+2020'
+            },
+            {
+                id: 'ford-f150-2023',
+                brand: 'Ford',
+                model: 'F-150 Raptor',
+                year: 2023,
+                mileage: '5,000 km',
+                engine: '3.5L EcoBoost',
+                transmission: '10-Speed Automatic',
+                features: ['Fox Racing Shocks', 'Trail Control', 'Pro Power Onboard'],
+                price: 65000,
+                image: 'https://placehold.co/600x400/60a5fa/ffffff?text=Ford+F-150+2023'
+            },
+            {
+                id: 'toyota-prius-2021',
+                brand: 'Toyota',
+                model: 'Prius',
+                year: 2021,
+                mileage: '20,000 km',
+                engine: '1.8L Hybrid',
+                transmission: 'CVT',
+                features: ['Excellent Fuel Economy', 'Toyota Safety Sense', 'Heated Seats'],
+                price: 26000,
+                image: 'https://placehold.co/600x400/3b82f6/ffffff?text=Toyota+Prius+2021'
+            },
+            {
+                id: 'honda-accord-2020',
+                brand: 'Honda',
+                model: 'Accord',
+                year: 2020,
+                mileage: '30,000 km',
+                engine: '2.0L Turbo',
+                transmission: 'Automatic',
+                features: ['Honda Sensing', 'Wireless Phone Charger', 'Heads-Up Display'],
+                price: 24000,
+                image: 'https://placehold.co/600x400/60a5fa/ffffff?text=Honda+Accord+2020'
+            },
+            {
+                id: 'mitsubishi-outlander-2022',
+                brand: 'Mitsubishi',
+                model: 'Outlander',
+                year: 2022,
+                mileage: '10,000 km',
+                engine: '2.5L MIVEC',
+                transmission: 'CVT',
+                features: ['Super All-Wheel Control', '3rd Row Seating', 'Bose Premium Audio'],
+                price: 31000,
+                image: 'https://placehold.co/600x400/3b82f6/ffffff?text=Mitsubishi+Outlander+2022'
+            },
+            {
+                id: 'hyundai-elantra-2023',
+                brand: 'Hyundai',
+                model: 'Elantra',
+                year: 2023,
+                mileage: '7,000 km',
+                engine: '2.0L MPI',
+                transmission: 'IVT',
+                features: ['Digital Key', 'Smart Trunk', 'LED Daytime Running Lights'],
+                price: 23000,
+                image: 'https://placehold.co/600x400/60a5fa/ffffff?text=Hyundai+Elantra+2023'
+            },
+        ]; 
+
+// --- Global Variables and DOM Elements ---
         const contentArea = document.getElementById('content-area');
         const navToggle = document.getElementById('nav-toggle');
         const navContent = document.getElementById('nav-content');
