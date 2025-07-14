@@ -4,15 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pratik Automobile - Reconditioned Car Center</title>
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Inter Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
-  <body class="transition-colors duration-300">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="transition-colors duration-300">
     <div id="app" class="min-h-screen flex flex-col">
-        <!-- Navigation Bar -->
         <header class="bg-card shadow-md py-4 px-6 sticky top-0 z-50 border-b border-color">
             <nav class="container mx-auto flex justify-between items-center flex-wrap">
                 <div class="flex items-center space-x-2">
@@ -66,12 +64,9 @@
             </nav>
         </header>
 
-        <!-- Main Content Area -->
         <main id="content-area" class="flex-grow">
-            <!-- Content will be dynamically loaded here -->
-        </main>
+            </main>
 
-        <!-- Footer -->
         <footer class="bg-card py-8 px-6 mt-12 border-t border-color">
             <div class="container mx-auto text-center text-text-light">
                 <div class="flex justify-center space-x-6 mb-6">
@@ -101,7 +96,16 @@
             </div>
         </footer>
 
-     
-   
-      </body>
+        <div id="messageModal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-button" onclick="document.getElementById('messageModal').classList.add('hidden')">&times;</span>
+                <h3 id="modalTitle" class="text-xl font-semibold mb-4 text-primary"></h3>
+                <p id="modalMessage" class="text-text-light"></p>
+                <button onclick="document.getElementById('messageModal').classList.add('hidden')" class="mt-6 px-6 py-2 bg-primary text-white rounded-md hover:bg-secondary-dark transition-colors duration-200">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
