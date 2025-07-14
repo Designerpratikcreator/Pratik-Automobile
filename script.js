@@ -10,7 +10,7 @@
                 engine: '1.5L Turbo',
                 transmission: 'Automatic',
                 features: ['Sunroof', 'Leather Seats', 'Apple CarPlay', 'Lane Keep Assist'],
-                price: 25000,
+                price: 3500000,
                 image: '/Assets/Honda Civic.jpg'
             },
             {
@@ -22,7 +22,7 @@
                 engine: '2.0L i-VTEC',
                 transmission: 'Automatic',
                 features: ['AWD', 'Panoramic Roof', 'Adaptive Cruise Control'],
-                price: 30000,
+                price: 9500000,
                 image: '/Assets/Honda crv.jpg'
             },
             {
@@ -34,7 +34,7 @@
                 engine: '3.2L Diesel',
                 transmission: 'Automatic',
                 features: ['4x4', 'Off-road Package', '7-Seater'],
-                price: 40000,
+                price: 18000000,
                 image: '/Assets/Mitsubishi pajero.jpg'
             },
             {
@@ -46,7 +46,7 @@
                 engine: '2.5L Hybrid',
                 transmission: 'CVT',
                 features: ['Hybrid System', 'Blind Spot Monitor', 'JBL Audio'],
-                price: 32000,
+                price: 13200000,
                 image: '/Assets/Toyota camry.jpg'
             },
             {
@@ -58,7 +58,7 @@
                 engine: '2.8L Diesel',
                 transmission: 'Automatic',
                 features: ['7-Seater', 'Leather Interior', 'LED Headlights'],
-                price: 45000,
+                price: 20000000,
                 image: '/Assets/Toyota fortuner.jpg'
             },
             {
@@ -70,7 +70,7 @@
                 engine: '2.0L Petrol',
                 transmission: 'Automatic',
                 features: ['Panoramic Sunroof', 'Ventilated Seats', 'Wireless Charging'],
-                price: 28000,
+                price: 7000000,
                 image: '/Assets/Hyundai Tucson.jpg'
             },
             {
@@ -82,7 +82,7 @@
                 engine: '3.0L Twin-Turbo',
                 transmission: 'PDK',
                 features: ['Sport Chrono Package', 'Bose Surround Sound', 'Carbon Ceramic Brakes'],
-                price: 120000,
+                price: 17100000,
                 image: '/Assets/Porsche 911.jpeg'
             },
             {
@@ -94,7 +94,7 @@
                 engine: '3.0L Ingenium',
                 transmission: 'Automatic',
                 features: ['Air Suspension', 'Meridian Sound System', 'Terrain Response 2'],
-                price: 75000,
+                price: 20000000,
                 image: '/Assets/Land rover.jpg'
             },
             {
@@ -106,7 +106,7 @@
                 engine: '3.0L P400',
                 transmission: 'Automatic',
                 features: ['Off-Road Tires', 'Winch', 'Expedition Roof Rack'],
-                price: 80000,
+                price: 40000000,
                 image: '/Assets/Defender.jpg'
             },
             {
@@ -118,7 +118,7 @@
                 engine: '3.6L Pentastar',
                 transmission: 'Automatic',
                 features: ['Removable Roof', 'Off-Road Suspension', 'Locking Differentials'],
-                price: 55000,
+                price: 25000000,
                 image: '/Assets/Jeep.jpg'
             },
             {
@@ -130,7 +130,7 @@
                 engine: '3.5L EcoBoost',
                 transmission: '10-Speed Automatic',
                 features: ['Fox Racing Shocks', 'Trail Control', 'Pro Power Onboard'],
-                price: 65000,
+                price: 22000000,
                 image: '/Assets/Ford.jpg'
             },
             {
@@ -142,7 +142,7 @@
                 engine: '1.8L Hybrid',
                 transmission: 'CVT',
                 features: ['Excellent Fuel Economy', 'Toyota Safety Sense', 'Heated Seats'],
-                price: 26000,
+                price: 6000000,
                 image: '/Assets/Toyota Prius.jpeg'
             },
             {
@@ -154,7 +154,7 @@
                 engine: '2.0L Turbo',
                 transmission: 'Automatic',
                 features: ['Honda Sensing', 'Wireless Phone Charger', 'Heads-Up Display'],
-                price: 24000,
+                price: 7250000,
                 image: '/Assets/Honda Accord 2020.jpg'
             },
             {
@@ -166,7 +166,7 @@
                 engine: '2.5L MIVEC',
                 transmission: 'CVT',
                 features: ['Super All-Wheel Control', '3rd Row Seating', 'Bose Premium Audio'],
-                price: 31000,
+                price: 12000000,
                 image: '/Assets/Mitsubishi pajero.jpg'
             },
             {
@@ -178,7 +178,7 @@
                 engine: '2.0L MPI',
                 transmission: 'IVT',
                 features: ['Digital Key', 'Smart Trunk', 'LED Daytime Running Lights'],
-                price: 23000,
+                price: 2550000,
                 image: '/Assets/Hyundai Elantra.jpeg'
             },
         ]; 
@@ -206,7 +206,7 @@
         const modalMessage = document.getElementById('modalMessage');
 
         let minPrice = 0;
-        let maxPrice = 150000; // Max price in our dataset
+        let maxPrice = 50000000; // Max price in our dataset
         let currentMinPrice = 0;
         let currentMaxPrice = maxPrice;
 
@@ -270,7 +270,7 @@
                     <img src="${car.image}" alt="${car.brand} ${car.model}" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2 text-primary">${car.year} ${car.brand} ${car.model}</h3>
-                        <p class="text-text-light mb-4 font-bold text-lg">$${car.price.toLocaleString()}</p>
+                        <p class="text-text-light mb-4 font-bold text-lg">RS${car.price.toLocaleString()}</p>
                         <ul class="text-sm text-gray-500 dark:text-gray-400 mb-4 list-disc list-inside">
                             <li>Mileage: ${car.mileage}</li>
                             <li>Engine: ${car.engine}</li>
@@ -735,20 +735,14 @@
                         <div class="bg-card p-8 rounded-lg shadow-lg border border-color">
                             <h3 class="text-2xl font-semibold mb-6 text-text-light">Contact Information</h3>
                             <div class="space-y-4 text-text-light">
-                                <p><i class="fas fa-phone-alt text-primary mr-3"></i> +977 9876543210</p>
-                                <p><i class="fas fa-envelope text-primary mr-3"></i> info@pratikautomobile.com</p>
-                                <p><i class="fas fa-map-marker-alt text-primary mr-3"></i> 123 Ring Road, Kathmandu, Nepal</p>
+                                <p><i class="fas fa-phone-alt text-primary mr-3"></i> +977 9861347187</p>
+                                <p><i class="fas fa-envelope text-primary mr-3"></i> Pratik_mhnrs2023@kusoa.edu.np</p>
+                                <p><i class="fas fa-map-marker-alt text-primary mr-3"></i> Lalitpur Ring Road, Gwarko, Nepal</p>
                                 <p><i class="fas fa-clock text-primary mr-3"></i> Mon - Sat: 9:00 AM - 6:00 PM</p>
                             </div>
-                            <div class="mt-8">
-                                <h3 class="text-2xl font-semibold mb-4 text-text-light">Find Us on Map</h3>
-                                <!-- Placeholder for Google Map embed -->
-                                <div class="bg-input-bg h-64 rounded-md flex items-center justify-center text-gray-500 dark:text-gray-400 border border-color">
-                                    <p>Map Placeholder (e.g., Google Maps embed)</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                             </div>
+                          
+                      
                     <div id="feedback-section" class="mt-16">
                         ${renderFeedbackSection()}
                     </div>
