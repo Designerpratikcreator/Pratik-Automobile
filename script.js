@@ -70,7 +70,7 @@ const carsData = [
         transmission: 'Automatic',
         features: ['Panoramic Sunroof', 'Ventilated Seats', 'Wireless Charging'],
         price: 7000000,
-        image: '/Assets/Hyundai Tucson.jpg'
+        image: '/Assets/Hyundai Tucson .jpg'
     },
     {
         id: 'porsche-911-2020',
