@@ -575,14 +575,13 @@ function renderBooking() {
         <section id="booking" class="container mx-auto py-16 px-6">
             <h2 class="text-4xl font-bold text-center mb-12 text-primary">Book Your Dream Car</h2>
              <div class="bg-card p-8 rounded-lg shadow-lg border border-color max-w-3xl mx-auto">
-              <form id="Pratik Automobile-form" class="main-form" action="https://formspree.io/f/mjkorllj" method="POST">
-                <form id="booking-form" class="space-y-6">
+              <form id="booking-form" class="space-y-6" action="https://formspree.io/f/mjkorllj" method="POST">
                     <div>
                         <h3 class="text-2xl font-semibold mb-4 text-text-light">1. Select Your Car</h3>
                         <label for="booking-car" class="block text-sm font-medium text-text-light mb-2">Choose a car:</label>
-                        <select id="booking-car" name="car" class="w-full p-3 border border-color rounded-md input-bg focus:outline-none focus:ring-2 focus:ring-primary" required>
+                        <select id="booking-car" name="car" class="w-full p-3 border border-color rounded-md input-bg" required>
                             <option value="">-- Select a Car --</option>
-                            ${carsData.map(car => `<option value="${car.id}">${car.year} ${car.brand} ${car.model} (RS${car.price.toLocaleString()})</option>`).join('')}
+                            ${carsData.map(car => `<option value="${car.year} ${car.brand} ${car.model} (RS${car.price.toLocaleString()})">${car.year} ${car.brand} ${car.model}</option>`).join('')}
                         </select>
                     </div>
 
@@ -591,48 +590,32 @@ function renderBooking() {
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div>
                                 <label for="full-name" class="block text-sm font-medium text-text-light mb-2">Full Name:</label>
-                                <input type="text" id="full-name" name="fullName" class="w-full p-3 border border-color rounded-md input-bg focus:outline-none focus:ring-2 focus:ring-primary" required>
+                                <input type="text" id="full-name" name="fullName" class="w-full p-3 border border-color rounded-md input-bg" required>
                             </div>
                             <div>
                                 <label for="email" class="block text-sm font-medium text-text-light mb-2">Email Address:</label>
-                                <input type="email" id="email" name="email" class="w-full p-3 border border-color rounded-md input-bg focus:outline-none focus:ring-2 focus:ring-primary" required>
+                                <input type="email" id="email" name="email" class="w-full p-3 border border-color rounded-md input-bg" required>
                             </div>
                             <div>
                                 <label for="phone" class="block text-sm font-medium text-text-light mb-2">Phone Number:</label>
-                                <input type="tel" id="phone" name="phone" class="w-full p-3 border border-color rounded-md input-bg focus:outline-none focus:ring-2 focus:ring-primary" required>
+                                <input type="tel" id="phone" name="phone" class="w-full p-3 border border-color rounded-md input-bg" required>
                             </div>
                             <div>
                                 <label for="address" class="block text-sm font-medium text-text-light mb-2">Address:</label>
-                                <input type="text" id="address" name="address" class="w-full p-3 border border-color rounded-md input-bg focus:outline-none focus:ring-2 focus:ring-primary" required>
+                                <input type="text" id="address" name="address" class="w-full p-3 border border-color rounded-md input-bg" required>
                             </div>
                         </div>
                     </div>
 
                     <div>
-                        <h3 class="text-2xl font-semibold mb-4 text-text-light">3. Financial & Identification</h3>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                            For car purchase validity, please provide the following documents. These will be securely handled.
-                            (Note: File uploads are for demo purposes; actual validation requires server-side processing.)
-                        </p>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div>
-                                <label for="id-proof" class="block text-sm font-medium text-text-light mb-2">National ID / Passport Scan:</label>
-                                <input type="file" id="id-proof" name="idProof" accept=".pdf,.jpg,.jpeg,.png" class="w-full p-3 border border-color rounded-md input-bg focus:outline-none focus:ring-2 focus:ring-primary" required>
-                            </div>
-                            <div>
-                                <label for="income-proof" class="block text-sm font-medium text-text-light mb-2">Proof of Income (e.g., Salary Slip, Bank Statement):</label>
-                                <input type="file" id="income-proof" name="incomeProof" accept=".pdf,.jpg,.jpeg,.png" class="w-full p-3 border border-color rounded-md input-bg focus:outline-none focus:ring-2 focus:ring-primary" required>
-                            </div>
-                        </div>
-                        <div class="mt-4">
-                            <label for="payment-method" class="block text-sm font-medium text-text-light mb-2">Preferred Payment Method:</label>
-                            <select id="payment-method" name="paymentMethod" class="w-full p-3 border border-color rounded-md input-bg focus:outline-none focus:ring-2 focus:ring-primary" required>
-                                <option value="">-- Select Method --</option>
-                                <option value="bank-transfer">Bank Transfer</option>
-                                <option value="financing">Financing Application</option>
-                                <option value="direct-payment">Direct Payment</option>
-                            </select>
-                        </div>
+                        <h3 class="text-2xl font-semibold mb-4 text-text-light">3. Payment Method</h3>
+                        <label for="payment-method" class="block text-sm font-medium text-text-light mb-2">Preferred Payment Method:</label>
+                        <select id="payment-method" name="paymentMethod" class="w-full p-3 border border-color rounded-md input-bg" required>
+                            <option value="">-- Select Method --</option>
+                            <option value="bank-transfer">Bank Transfer</option>
+                            <option value="financing">Financing Application</option>
+                            <option value="direct-payment">Direct Payment</option>
+                        </select>
                     </div>
 
                     <div>
@@ -641,25 +624,33 @@ function renderBooking() {
                             <p class="mb-2">By submitting this booking request, you agree to the following terms:</p>
                             <ul class="list-disc list-inside space-y-1">
                                 <li>All information provided must be accurate and truthful.</li>
-                                <li>A booking fee (if applicable) is non-refundable upon cancellation after 24 hours.</li>
-                                <li>Final car purchase is subject to a physical inspection and agreement on final terms.</li>
-                                <li>Pratik Automobile reserves the right to reject any booking request.</li>
-                                <li>Your data will be handled in accordance with our Privacy Policy.</li>
+                                <li>A booking fee (if applicable) is non-refundable after 24 hours.</li>
+                                <li>Final car purchase is subject to inspection and final agreement.</li>
+                                <li>Pratik Automobile may reject any booking request.</li>
+                                <li>Your data will be handled according to our Privacy Policy.</li>
                             </ul>
                         </div>
                         <div class="flex items-center mt-4">
-                            <input type="checkbox" id="terms-agree" name="termsAgree" class="h-4 w-4 text-primary rounded border-gray-300 focus:ring-primary" required>
-                            <label for="terms-agree" class="ml-2 block text-sm text-text-light">I agree to the <a href="#" class="text-primary hover:underline">Terms and Conditions</a>.</label>
+                            <input type="checkbox" id="terms-agree" name="termsAgree" class="h-4 w-4 text-primary rounded border-gray-300" required>
+                            <label for="terms-agree" class="ml-2 text-sm text-text-light">I agree to the <a href="#" class="text-primary hover:underline">Terms and Conditions</a>.</label>
                         </div>
                     </div>
 
-                    <button type="submit" class="w-full py-3 bg-primary text-white font-semibold rounded-md hover:bg-secondary-dark transition-colors duration-200 transform hover:scale-105">
+                    <button type="submit" class="w-full py-3 bg-primary text-white font-semibold rounded-md hover:bg-secondary-dark transition-all transform hover:scale-105">
                         Submit Booking Request
                     </button>
                 </form>
             </div>
         </section>
     `;
+
+    // Optional success modal trigger if redirected from Formspree with query param
+    if (window.location.search.includes("success=1")) {
+        showModal("Booking Submitted!", "Your booking request has been received. We will contact you soon.");
+        history.replaceState({}, document.title, window.location.pathname); // Clean URL
+    }
+}
+
 
     document.getElementById('booking-form').addEventListener('submit', function(event) {
         event.preventDefault();
