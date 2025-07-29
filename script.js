@@ -636,33 +636,33 @@ function renderBooking() {
         showModal("Booking Sent", "Thank you! We'll contact you shortly.");
         history.replaceState(null, "", window.location.pathname); // remove query param
     }
-}
 
-
-
+    // Attach form submission listener for the booking form
     document.getElementById('booking-form').addEventListener('submit', function(event) {
-        event.preventDefault();
+        event.preventDefault(); // Prevent default form submission to handle with JS
+
         const selectedCar = document.getElementById('booking-car').value;
         const fullName = document.getElementById('full-name').value;
         const email = document.getElementById('email').value;
         const phone = document.getElementById('phone').value;
         const address = document.getElementById('address').value;
-        const idProof = document.getElementById('id-proof').files[0];
-        const incomeProof = document.getElementById('income-proof').files[0];
         const paymentMethod = document.getElementById('payment-method').value;
         const termsAgree = document.getElementById('terms-agree').checked;
 
-        if (!selectedCar || !fullName || !email || !phone || !address || !idProof || !incomeProof || !paymentMethod || !termsAgree) {
+        if (!selectedCar || !fullName || !email || !phone || !address || !paymentMethod || !termsAgree) {
             showModal('Validation Error', 'Please fill in all required fields and agree to the terms.');
             return;
         }
 
-        // Simulate form submission
+        // If validation passes, allow the form to submit to Formspree
+        // Formspree will handle the actual submission and redirect
+        // For local testing without Formspree, you might use an AJAX call or simply log
         console.log('Booking Details:', {
-            selectedCar, fullName, email, phone, address, idProof: idProof.name, incomeProof: incomeProof.name, paymentMethod, termsAgree
+            selectedCar, fullName, email, phone, address, paymentMethod, termsAgree
         });
-        showModal('Booking Confirmed!', 'Thank you for your booking request! We will contact you shortly to finalize the details. Your booking ID is: ' + Math.random().toString(36).substr(2, 9).toUpperCase());
-        this.reset(); // Reset the form
+
+
+        this.submit(); // Actually submit the form (to Formspree if action is set)
     });
 }
 
@@ -877,7 +877,7 @@ const routes = {
     '#gallery-2023': () => renderGallery(2023),
     '#gallery-2022': () => renderGallery(2022),
     '#gallery-2021': () => renderGallery(2021),
-    '#gallery-older': () => renderGallery('older'), // You might want to define 'older' logic
+    '#gallery-older': () => renderGallery('older'), // You might want to define 'older' logic, currently shows all
     '#booking': renderBooking,
     '#contact': renderContact,
     '#brand-honda': () => renderBrandPage('Honda'),
@@ -923,3 +923,5 @@ navToggle.addEventListener('click', () => {
 });
 
 themeToggle.addEventListener('click', toggleTheme);
+
+// Removed the trailing `}` that was prematurely closing the script.
